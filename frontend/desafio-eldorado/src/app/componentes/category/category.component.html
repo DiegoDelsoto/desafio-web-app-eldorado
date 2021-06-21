@@ -1,0 +1,20 @@
+<button routerLink="/add-category" type="button" class="btn btn-primary">Add </button> 
+<br><br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let category of categorys">
+      <th>{{category.id}}</th>
+      <td>{{category.name}}</td>
+      <td><button  [disabled]="true" type="button" class="btn btn-secondary">Edit</button></td>
+      <td><button (click)="deleteById(category.id)" class="btn btn-sm btn-danger" type="button">Delete</button></td>
+    </tr>    
+  </tbody>
+</table>

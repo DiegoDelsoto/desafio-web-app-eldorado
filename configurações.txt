@@ -1,0 +1,24 @@
+/******************************
+ CONEXÃO COM MYSQL
+******************************/
+host:'127.0.0.1',
+user: 'root',
+password: 'admin',
+port : '3306',
+database: 'app'
+
+
+/******************************
+ BACKEND
+******************************/
+PORT: 3000
+http://localhost:3000/app/devices
+http://localhost:3000/app/types
+
+
+/******************************
+ FRONTEND
+******************************/
+PORT: 8081
+http://localhost:8081/
+	

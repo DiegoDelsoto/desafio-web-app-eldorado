@@ -1,0 +1,24 @@
+<button routerLink="/add-device" type="button" class="btn btn-primary">Add</button> 
+<br><br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Category</th>
+      <th scope="col">Color</th>
+      <th scope="col">Part Number</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let device of devices">
+      <th>{{device.id}}</th>
+      <td>{{device.category}}</td>
+      <td>{{device.color}}</td>
+      <td>{{device.partNumber}}</td>
+      <td><button  [disabled]="true" type="button" class="btn btn-secondary">Edit</button></td>
+      <td><button (click)="deleteDeviceById(device.id)" class="btn btn-sm btn-danger" type="button">Delete</button></td>
+    </tr>    
+  </tbody>
+</table>
